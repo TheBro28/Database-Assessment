@@ -99,11 +99,13 @@ while menu_choice != 'Z':
     menu_choice = menu_choice.upper()
 
     if menu_choice == 'A':
-        position = input('What position players do you want to see? (Goalkeeper, Defender, Midfielder, Foward): ')
-        if position not in ['Goalkeeper', 'Defender', 'Midfielder', 'Foward']:
+        position = input('What position players do you want to see? (Goalkeeper, Defender, Midfielder, Foward): ').title()
+        if position in ['Goalkeeper', 'Defender', 'Midfielder', 'Foward']:
+            print_parameter_query("name, surname, appearances, age, player_number, clean_sheets, saves, goals_conceded, goals_scored, assists, win, loss, market_value, contract_signed", "position = ? ORDER BY rating DESC",position)
+        else:
             print("Invalid position. Please enter in one of the following: Goalkeeper, Defender, Midfielder, Foward.")
             
 
-        print_parameter_query("firstname, surname, appearances, age, player_number, clean_sheets, saves, goals_conceded, goals_scored, assists, wins, losses, market_value, contract_signed", "position = ? ORDER BY rating DESC",position)
+        
     elif menu_choice == 'B':
         print_query ("English Players")
