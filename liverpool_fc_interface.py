@@ -93,6 +93,7 @@ while menu_choice != 'Z':
                         'C - Players with more than 1 Goal\n'
                         'D - Top 10 Players with the most Passes\n'
                         'E - Top 5 Players with the most Goals Scored\n' 
+                        'F - Players who have been with Liverpool for the longest to shortest\n'
                         'Z - Exit\n\n'
                         'Type option here: ')
     menu_choice = menu_choice.upper()
@@ -114,6 +115,8 @@ while menu_choice != 'Z':
         print_query ("Top 10 highest passes")
     elif menu_choice == 'E':
         print_query ("Top 5 goal scoring players")
+    elif menu_choice == 'F':
+        print_query ("Liverpool Veterans")
     elif menu_choice == 'Z':
         print("Exiting the program. Goodbye!")
         break
