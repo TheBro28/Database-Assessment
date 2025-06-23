@@ -90,10 +90,9 @@ while menu_choice != 'Z':
                         'Type the letter for the information you want to see:\n'
                         'A - Statistics based on player positions\n'
                         'B - English Players\n'
-                        'C - Midfielders and Striker Player Statistics\n'
-                        'D - Players with more than 1 Goal\n'
-                        'E - Top 10 Players with the most Passes\n' 
-                        'F - Top 5 Players with the most Goals Scored\n'
+                        'C - Players with more than 1 Goal\n'
+                        'D - Top 10 Players with the most Passes\n'
+                        'E - Top 5 Players with the most Goals Scored\n' 
                         'Z - Exit\n\n'
                         'Type option here: ')
     menu_choice = menu_choice.upper()
@@ -107,8 +106,16 @@ while menu_choice != 'Z':
                 break
             else:
                 print("Invalid position. Please enter in one of the following: Goalkeeper, Defender, Midfielder, Foward.")
-            
-
-        
     elif menu_choice == 'B':
         print_query ("English Players")
+    elif menu_choice == 'C':
+        print_query ("Player with more than 1 goal scored")
+    elif menu_choice == 'D':
+        print_query ("Top 10 highest passes")
+    elif menu_choice == 'E':
+        print_query ("Top 5 goal sccoring players")
+    elif menu_choice == 'Z':
+        print("Exiting the program. Goodbye!")
+        break
+    else:
+        print("Invalid option. Please try again.")
