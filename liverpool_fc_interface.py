@@ -113,7 +113,7 @@ while menu_choice != 'Z':
     elif menu_choice == 'D':
         print_query ("Top 10 highest passes")
     elif menu_choice == 'E':
-        print_query ("Top 5 goal sccoring players")
+        print_query ("Top 5 goal scoring players")
     elif menu_choice == 'Z':
         print("Exiting the program. Goodbye!")
         break
