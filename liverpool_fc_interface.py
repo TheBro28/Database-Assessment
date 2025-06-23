@@ -93,7 +93,7 @@ while menu_choice != 'Z':
                         'C - Players with more than 1 Goal\n'
                         'D - Top 10 Players with the most Passes\n'
                         'E - Top 5 Players with the most Goals Scored\n' 
-                        'F - Players who have been with Liverpool for the longest to shortest\n'
+                        'F - Players who have been with Liverpool for the longest to shortest time\n'
                         'Z - Exit\n\n'
                         'Type option here: ')
     menu_choice = menu_choice.upper()
