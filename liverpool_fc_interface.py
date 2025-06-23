@@ -100,8 +100,8 @@ while menu_choice != 'Z':
     
     if menu_choice == 'A':
         while True:
-            position = input('What position players do you want to see? (Goalkeeper, Defender, Midfielder, Foward): ').title()
-            if position in ['Goalkeeper', 'Defender', 'Midfielder', 'Foward']:
+            position = input('What position players do you want to see? (Goalkeeper, Defender, Midfielder, Forward): ').title()
+            if position in ['Goalkeeper', 'Defender', 'Midfielder', 'Forward']:
                 print_parameter_query("firstname, surname, appearances, player_number, clean_sheets, saves, goals_conceded, goals_scored, assists, wins, losses, market_value, contract_signed", "position = ? ORDER BY rating DESC",position)
                 break
             else:
