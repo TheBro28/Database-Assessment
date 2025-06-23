@@ -106,7 +106,7 @@ while menu_choice != 'Z':
                 print_parameter_query("firstname, surname, appearances, player_number, clean_sheets, saves, goals_conceded, goals_scored, assists, wins, losses, market_value, contract_signed", "position = ? ORDER BY rating DESC",position)
                 break
             else:
-                print("Invalid position. Please enter in one of the following: Goalkeeper, Defender, Midfielder, Foward.")
+                print("Invalid position. Please enter in one of the following: Goalkeeper, Defender, Midfielder, Forward.")
     elif menu_choice == 'B':
         print_query ("English Players")
     elif menu_choice == 'C':
