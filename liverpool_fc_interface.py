@@ -82,16 +82,11 @@ def print_parameter_query(fields:str, where:str, parameter):
 
 
 
-
-position = input('What position players do you want to see: ')
-
-print_parameter_query("firstname, surname, appearances, awards, rating, clean_sheets, goals_conceded, wins, losses", "position = ? ORDER BY rating DESC",position)
-
 menu_choice =""
 while menu_choice != 'Z':
     menu_choice = input('Welcome to the Liverpool Football Club player statistics database\n\n'
                         'Type the letter for the information you want to see:\n'
-                        'A - Defender Player Statistics\n'
+                        'A - Statistics based on player positions\n'
                         'B - English Players\n'
                         'C - Midfielders and Striker Player Statistics\n'
                         'D - Players with more than 1 Goal\n'
@@ -100,3 +95,13 @@ while menu_choice != 'Z':
                         'Z - Exit\n\n'
                         'Type option here: ')
     menu_choice = menu_choice.upper()
+
+    if menu_choice == 'A':
+        position = input('What position players do you want to see? (Goalkeeper, Defender, Midfielder, Foward): ')
+        if position not in ['Goalkeeper', 'Defender', 'Midfielder', 'Foward']:
+            print("Invalid position. Please enter in one of the following: Goalkeeper, Defender, Midfielder, Foward.")
+            
+
+        print_parameter_query("*", "position = ? ORDER BY rating DESC",position)
+    elif menu_choice == 'B':
+        print_query ("English Players")
