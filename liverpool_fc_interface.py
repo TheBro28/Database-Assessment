@@ -45,6 +45,8 @@ def print_query(view_name:str):
     print(tabulate(results,headings))
     db.close()
 
+
+
 # Import the libraries to connect to the database and present the information in tables
 
 import sqlite3
@@ -102,6 +104,6 @@ while menu_choice != 'Z':
             print("Invalid position. Please enter in one of the following: Goalkeeper, Defender, Midfielder, Foward.")
             
 
-        print_parameter_query("*", "position = ? ORDER BY rating DESC",position)
+        print_parameter_query("firstname, surname, country_of_birth, appearances, age, player_number, clean_sheets, saves, goals_conceded, goals_scored, assists, chances_created, shots_on_target, wins, losses, salary, market_value, contract_signed", "position = ? ORDER BY rating DESC",position)
     elif menu_choice == 'B':
         print_query ("English Players")
